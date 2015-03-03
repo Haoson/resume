@@ -1,0 +1,255 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Two Column One Page Curriculum Vitae
+% LaTeX Template
+% Version 1.1 (24/1/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Alessandro (The CV Inn)
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[10pt]{article} % Font size - 10pt, 11pt or 12pt
+
+\usepackage[hmargin=1.25cm, vmargin=1.5cm]{geometry} % Document margins
+
+\usepackage{marvosym} % Required for symbols in the colored box
+\usepackage{ifsym} % Required for symbols in the colored box
+
+\usepackage[usenames,dvipsnames]{xcolor} % Allows the definition of hex colors
+
+% Fonts and tweaks for XeLaTeX
+\usepackage{fontspec,xltxtra,xunicode}
+\defaultfontfeatures{Mapping=tex-text}
+\usepackage{fontspec,xltxtra,xunicode}
+\usepackage{latexsym}
+\usepackage{xeCJK}
+
+\defaultfontfeatures{Mapping=tex-text}
+\setCJKmainfont[BoldFont=SimHei,ItalicFont=KaiTi]{SimSun}
+\setmainfont{Palatino Linotype}
+%\setmonofont[Scale=MatchLowercase]{Andale Mono}
+
+% Colors for links, text and headings
+\usepackage{hyperref}
+\definecolor{linkcolor}{HTML}{506266} % Blue-gray color for links
+\definecolor{shade}{HTML}{DFDFDF} % Peach color for the contact information box
+\definecolor{text1}{HTML}{2b2b2b} % Main document font color, off-black
+\definecolor{headings}{HTML}{701112} % Dark red color for headings
+% Other color palettes: shade=B9D7D9 and linkcolor=A40000; shade=D4D7FE and linkcolor=FF0080
+
+\hypersetup{colorlinks,breaklinks, urlcolor=linkcolor, linkcolor=linkcolor} % Set up links and colors
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+% Headers and footers can be added with the \lhead{} \rhead{} \lfoot{} \rfoot{} commands
+% Example footer:
+%\rfoot{\color{headings} {\sffamily Last update: \today}. Typeset with Xe\LaTeX}
+
+\renewcommand{\headrulewidth}{0pt} % Get rid of the default rule in the header
+
+\usepackage{titlesec} % Allows creating custom \section's
+
+% Format of the section titles
+\titleformat{\section}{\color{headings}
+\scshape\Large\raggedright}{}{0em}{}[\color{black}\titlerule]
+
+\titlespacing{\section}{0pt}{0pt}{5pt} % Spacing around titles
+
+\begin{document}
+
+\color{text1} % Sets the default text color for the whole document to the color defined as 'text1'
+
+%----------------------------------------------------------------------------------------
+%	TITLE
+%----------------------------------------------------------------------------------------
+
+
+%----------------------------------------------------------------------------------------
+
+\begin{minipage}[t]{0.6\textwidth} % Start the left-hand side of the page
+\vspace{0pt} % Trick for alignment
+
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE
+%----------------------------------------------------------------------------------------
+
+\section{实习经历}
+
+%------------------------------------------------
+% WORK EXPERIENCE 1
+%------------------------------------------------
+{\bf \large \textit{支付宝（中国）网络技术有限公司}} \hfill  \hfill {2013.7 至 2014.4\\}\\
+{隶属于技术保障-数据库技术-OceanBase团队，实习期间，主要工作有两块：}
+\begin{itemize} \itemsep -1pt 
+\item obmonitor项目。obmonitor是为OceanBase数据库开发的监控告警平台，平台由我和另一个师兄两人维护开发，其中我重构了所有的告警模块，且在双十一期间为OceanBase开发了数据库监控大盘，系统能够稳定运行了线上。
+\item log-center项目。日志中心项目是我个人独立为团队开发的一款工具，由于OceanBase是分布式数据库，出现故障需要DBA在多个组件间查找日志，而且OB每天产生的日志量也多达TB级别，所以需要一个自动故障检测和告警的工具。项目难点在于海量日志数据的近实时计算并对外提供查询服务，项目采用Storm实现实时计算，通过SolrCloud完成分布式索引和查询，web层采用Spring MVC+Spring+iBatis等框架。至我离职时，项目在线上运行有一个月。
+\end{itemize}
+
+%------------------------------------------------
+% WORK EXPERIENCE 2
+%------------------------------------------------
+{\bf \large \textit{中淮供应链股份有限公司}} \hfill  \hfill {2014.6 至 2014.9\\}\\
+{实习期间，主导开发了中淮供应链木材商城。主要工作包含：}
+\begin{itemize} \itemsep -1pt
+\item 团队三人，我负责主体架构，全程参与了设计与开发，完成了一个在线商城基本的前后台功能。项目难点在于对供应链需求的理解，技术难点主要是系统的性能和稳定性，主要解决手段是动静分离以及加缓存。由于这个项目主要由我负责，通过这个项目，加深了我对团队分工和团队合作的理解。
+\item 项目站点：\href{http://www.zhchain.com}{中淮供应链木材商城}
+\end{itemize}
+
+
+%----------------------------------------------------------------------------------------
+%	PROJECT EXPERIENCE
+%----------------------------------------------------------------------------------------
+
+\section{主要项目}
+
+%------------------------------------------------
+% WORK EXPERIENCE 1
+%------------------------------------------------
+{\bf \large \textit{algorithm-hodgepodge}} \hfill  \hfill {2014年\\}
+
+\normalsize{C++项目。主要包含三个部分，一是实现了一个简易版的STL，包含主要数据结构、迭代器以及函数对象；二是典型算法问题的解答集合；三是一些排序算法的实现。这是一个杂糅的项目，个人兴趣项目，主要偏向数据将结构和算法的实现。}\\
+
+{\bf \large \textit{火车票系统}} \hfill  \hfill {2013年\\}
+
+\normalsize{Linux C程序。实现了简单的linux系统上的c/s架构，模拟铁路订票功能(简单功能)。项目重点在于IPC通信，数据存储采用mysql。}\\
+
+
+{\bf \large \textit{Dessert House系统}} \hfill  \hfill {2013年\\}
+
+\normalsize{J2EE项目。一个在线的甜品预定网站系统。主要模块包括会员功能模块(浏览、将商品加入购物车、预定等)、经理统计模块、总经理的店面管理，权限管理模块。后台使用了spring mvc + Hibernate开发。前台框架主要使用了Bootstrap和jQuery。}\\
+
+{\bf \large \textit{汪星人购物搜索引擎开发}} \hfill  \hfill {2012年\\}
+
+\normalsize{Java项目。一个购物垂直搜索引擎，实现了对主流商品网站的商品数据的抓取、信息提取、比价等功能。这是一个三人项目，我在项目中担当PM，既负责团队协作，也负责具体的开发工作。这个项目是我们参加中国软件杯的作品。获得了优秀奖。}\\
+
+{\bf \large \textit{Forerunner轻博客系统}} \hfill  \hfill {2012年\\}
+
+\normalsize{php项目。一个轻博客系统，功能类似于点点和lofter,具备发布文字、图片、视频、链接、音乐等功能。}\\
+
+
+\end{minipage} % End the left-hand side of the page
+\hfill
+\begin{minipage}[t]{0.32\textwidth} % Start the right-hand side of the page
+\vspace{0pt} % Trick for alignment
+
+%----------------------------------------------------------------------------------------
+%	COLORED BOX
+%----------------------------------------------------------------------------------------
+\colorbox{shade}{\textcolor{text1}{
+\begin{tabular}{c|p{6cm}}
+\raisebox{0pt} & 郝伟清 \\ % Education 
+\raisebox{-3pt}{\Mobilefone} &  (+86)18751852080 \\ % Phone number
+\raisebox{-1pt}{\Letter} & haoweiqinghaoson@gmail.com \\ % Email address
+\raisebox{-4pt}{\textifsymbol{18}} & 江苏省南京市鼓楼区 汉口路22号 \\ % Address
+\end{tabular}
+}
+}\\[10pt]
+
+
+%----------------------------------------------------------------------------------------
+%	SKILLS
+%----------------------------------------------------------------------------------------
+
+\section{主要技能} 
+
+\begin{tabular}{rl}
+& \\
+语言
+& C++, Java, Python, javascript, php\\
+& \\
+工具
+& Vim, Git, SVN, CGDB, valgrind, \\
+& SecureCRT, Eclipse, IntelliJ\\
+& \\
+系统
+& Ubuntu, CentOS, Windows\\
+& \\ \\
+\end{tabular}
+
+\section{教育经历} 
+
+\begin{tabular}{rl}
+& \\
+2014.9 至 2016.6  & \textbf{南京大学软件学院硕士}\\
+& \\
+2010.9 至 2014.6  & \textbf{南京大学软件学院本科}\\ 
+& \\
+\end{tabular}\\[10pt]
+
+%----------------------------------------------------------------------------------------
+%	AWARDS
+%----------------------------------------------------------------------------------------
+
+\section{主要奖项} 
+
+\begin{tabular}{rl}
+& \\
+2014  & \textbf{南京大学校级优秀毕业生}\\
+& \\
+2013  & \textbf{新鸿基奖学金}\\
+& \\
+2012	 & \textbf{第一届“中国软件杯”优秀奖}\\
+& \textit{汪星人购物搜索引擎}\\ 
+& \\
+\end{tabular}\\[10pt]
+
+
+%----------------------------------------------------------------------------------------
+%	SCORE	
+%----------------------------------------------------------------------------------------
+
+\section{在校成绩} 
+
+\begin{tabular}{rl}
+& \\
+\textsc{GPA}
+& 4.3/5 \\
+& \\
+\textsc{排名}
+& 全年纪前20\% \\
+& \\
+\end{tabular}\\[10pt]
+
+%----------------------------------------------------------------------------------------
+%	LINK	
+%----------------------------------------------------------------------------------------
+
+\section{语言能力} 
+
+\begin{tabular}{rl}
+& \\
+\textsc{英语}
+& CET-6 \\
+& \\
+\end{tabular}\\[10pt]
+
+\section{相关链接} 
+
+\begin{tabular}{rl}
+& \\
+{GitHub:} &  \url{https://github.com/Haoson}\\
+{个人博客:} & \url{http://haoson.github.io/}\\
+& \\
+\end{tabular}\\[10pt]
+
+%----------------------------------------------------------------------------------------
+
+\end{minipage} % End right-hand side of the page
+
+\end{document}  
