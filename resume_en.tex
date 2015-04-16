@@ -1,0 +1,257 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Two Column One Page Curriculum Vitae
+% LaTeX Template
+% Version 1.1 (24/1/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Alessandro (The CV Inn)
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[10pt]{article} % Font size - 10pt, 11pt or 12pt
+
+\usepackage[hmargin=1.25cm, vmargin=1.5cm]{geometry} % Document margins
+
+\usepackage{marvosym} % Required for symbols in the colored box
+\usepackage{ifsym} % Required for symbols in the colored box
+
+\usepackage[usenames,dvipsnames]{xcolor} % Allows the definition of hex colors
+
+% Fonts and tweaks for XeLaTeX
+\usepackage{fontspec,xltxtra,xunicode}
+\defaultfontfeatures{Mapping=tex-text}
+\usepackage{fontspec,xltxtra,xunicode}
+\usepackage{latexsym}
+\usepackage{xeCJK}
+
+\defaultfontfeatures{Mapping=tex-text}
+\setCJKmainfont[BoldFont=SimHei,ItalicFont=KaiTi]{SimSun}
+\setmainfont{Palatino Linotype}
+%\setmonofont[Scale=MatchLowercase]{Andale Mono}
+
+% Colors for links, text and headings
+\usepackage{hyperref}
+\definecolor{linkcolor}{HTML}{506266} % Blue-gray color for links
+\definecolor{shade}{HTML}{DFDFDF} % Peach color for the contact information box
+\definecolor{text1}{HTML}{2b2b2b} % Main document font color, off-black
+\definecolor{headings}{HTML}{701112} % Dark red color for headings
+% Other color palettes: shade=B9D7D9 and linkcolor=A40000; shade=D4D7FE and linkcolor=FF0080
+
+\hypersetup{colorlinks,breaklinks, urlcolor=linkcolor, linkcolor=linkcolor} % Set up links and colors
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+% Headers and footers can be added with the \lhead{} \rhead{} \lfoot{} \rfoot{} commands
+% Example footer:
+%\rfoot{\color{headings} {\sffamily Last update: \today}. Typeset with Xe\LaTeX}
+
+\renewcommand{\headrulewidth}{0pt} % Get rid of the default rule in the header
+
+\usepackage{titlesec} % Allows creating custom \section's
+
+% Format of the section titles
+\titleformat{\section}{\color{headings}
+\scshape\Large\raggedright}{}{0em}{}[\color{black}\titlerule]
+
+\titlespacing{\section}{0pt}{0pt}{5pt} % Spacing around titles
+
+\begin{document}
+
+\color{text1} % Sets the default text color for the whole document to the color defined as 'text1'
+
+%----------------------------------------------------------------------------------------
+%	TITLE
+%----------------------------------------------------------------------------------------
+
+
+%----------------------------------------------------------------------------------------
+
+\begin{minipage}[t]{0.6\textwidth} % Start the left-hand side of the page
+\vspace{0pt} % Trick for alignment
+
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE
+%----------------------------------------------------------------------------------------
+
+\section{Internships}
+
+%------------------------------------------------
+% WORK EXPERIENCE 1
+%------------------------------------------------
+{\bf \large \textit{Alipay(China)Network Technology Co., Ltd.}} \hfill  \hfill {2013.7 - 2014.4\\}\\
+{I worked as an intern at the OceanBase team. My responsibility includes：}
+\begin{itemize} \itemsep -1pt 
+\item obmonitor project: Obmonitor is developed to monitor the OceanBase and send alarm infomation to the DBA in case of any failure. I am the main developer and maintainer of this platform. During the Double 11,I built a dashboard system monitoring the OceanBase database, and the system can work stably in the production environment.
+\item log-center project: Log-center is a log processing tool I created independently. When the cluster of OceanBase database or some components fail, the DBA need to search logs to find reason across multiple components. Besides,the amount of log OB generated every day up to TB level, so our team need a detection and monitoring tool. The difficulty of the project is to provide nearly real-time computation and query for log data in large scale. Storm is used to implement real-time computation and SolrCloud is used to implement distributed index and query.The web layer is built with Spring MVC+Spring+iBatis. By the time I left Alipay, the project has been runing online for a month.
+\end{itemize}
+
+%------------------------------------------------
+% WORK EXPERIENCE 2
+%------------------------------------------------
+{\bf \large \textit{Zhonghuai Supply Chain Co., Ltd.}} \hfill  \hfill {2014.6 - 2014.9\\}\\
+{I lead the development of a electronic mall project during the internship. My responsibility includes:}
+\begin{itemize} \itemsep -1pt
+\item I designed and implemented the main functions of the front-end and back-end for the electronic mall. The difficulty of the project is to understand the requirements of the supply chanin and provide high performance and stability online.
+\item Project Site：\href{http://www.zhchain.com}{Zhonghuai Supply Chain}
+\end{itemize}
+
+
+%----------------------------------------------------------------------------------------
+%	PROJECT EXPERIENCE
+%----------------------------------------------------------------------------------------
+
+\section{Project}
+
+%------------------------------------------------
+% WORK EXPERIENCE 1
+%------------------------------------------------
+{\bf \large \textit{algorithm-hodgepodge}} \hfill  \hfill {2014\\}
+
+\normalsize{C++ Project. It concludes three parts.1. A simple STL，including most important data structures, iterators and function objects. 2. A solution set for the typical algorithm problems. 3. Implmentation of some sotrting algorithms. This is a toy project of my interest.}\\
+
+{\bf \large \textit{Ticketting System}} \hfill  \hfill {2013\\}
+
+\normalsize{Linux C Project. This system gave a simple C/S architecture in Linux to simulate ticketting system. IPC is used to implement the concurrency of the server. Mysql is used to store data.}\\
+
+
+{\bf \large \textit{Invest Predicting System for Jinagsu Grid Co.}} \hfill  \hfill {2013\\}
+
+\normalsize{A outsourcing project. Main function is to predict the investment based on historical data. I'm in charge of the data processing and presentation module.}\\
+
+{\bf \large \textit{Vertical Search Engine for eclectronic commerce website.}} \hfill  \hfill {2012\\}
+
+\normalsize{Java Project. A vertical search engine for main eclectronic commerce websites. This project is awarded honor prize in China Software Cup.}\\
+
+
+
+\end{minipage} % End the left-hand side of the page
+\hfill
+\begin{minipage}[t]{0.32\textwidth} % Start the right-hand side of the page
+\vspace{0pt} % Trick for alignment
+
+%----------------------------------------------------------------------------------------
+%	COLORED BOX
+%----------------------------------------------------------------------------------------
+\colorbox{shade}{\textcolor{text1}{
+\begin{tabular}{c|p{6cm}}
+\raisebox{0pt} & Weiqing Hao \\ % Education 
+\raisebox{-3pt}{\Mobilefone} &  (+86)18751852080 \\ % Phone number
+\raisebox{-1pt}{\Letter} & haoweiqinghaoson@gmail.com \\ % Email address
+\raisebox{-4pt}{\textifsymbol{18}} & Nanjing University, \#22 HanKou Road \\ % Address
+\end{tabular}
+}
+}\\[10pt]
+
+
+%----------------------------------------------------------------------------------------
+%	SKILLS
+%----------------------------------------------------------------------------------------
+
+\section{Skills} 
+
+\begin{tabular}{rl}
+& \\
+Programming Languages
+& C++, Java,Python, \\
+& javascript, php\\
+& \\
+Tools
+& Vim, Git, SVN,\\
+& CGDB, valgrind, \\
+& IntelliJ, CMake\\
+& \\
+Operating Systems
+& Ubuntu, CentOS,\\
+& Windows\\
+& \\ \\
+\end{tabular}
+
+\section{Education Backgroud} 
+
+\begin{tabular}{rl}
+& \\
+2014.9 - 2016.6  & \textbf{ Master candidate, Software }\\
+ & \textbf{Institute, Nanjing University}\\
+& \\
+2010.9 - 2014.6  & \textbf{ Bachlor, Software Institute, }\\
+ & \textbf{Nanjing University}\\ 
+& \\
+\end{tabular}\\[10pt]
+
+%----------------------------------------------------------------------------------------
+%	AWARDS
+%----------------------------------------------------------------------------------------
+
+\section{Prize} 
+
+\begin{tabular}{rl}
+& \\
+2014  & \textbf{Excellent graduates of Nanjing}\\
+& \textbf{ Unviersity.}\\
+& \\
+2013  & \textbf{Xin Hongji Scholarship.}\\
+& \\
+2012	 & \textbf{Honor Prize of China Software Cup}\\
+& \\
+\end{tabular}\\[10pt]
+
+
+%----------------------------------------------------------------------------------------
+%	SCORE	
+%----------------------------------------------------------------------------------------
+
+\section{Grade} 
+
+\begin{tabular}{rl}
+& \\
+\textsc{GPA}
+& 4.3/5 \\
+& \\
+\textsc{Ranking}
+& Top 20 of 210 \\
+& \\
+\end{tabular}\\[10pt]
+
+%----------------------------------------------------------------------------------------
+%	LINK	
+%----------------------------------------------------------------------------------------
+
+\section{Foreign Languages} 
+
+\begin{tabular}{rl}
+& \\
+\textsc{English}
+& CET-6 \\
+& \\
+\end{tabular}\\[10pt]
+
+\section{Links} 
+
+\begin{tabular}{rl}
+& \\
+{GitHub:} &  \url{https://github.com/Haoson}\\
+{Blog:} & \url{http://haoson.github.io/}\\
+& \\
+\end{tabular}\\[10pt]
+
+%----------------------------------------------------------------------------------------
+
+\end{minipage} % End right-hand side of the page
+
+\end{document}  
